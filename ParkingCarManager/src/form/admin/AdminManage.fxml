@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminManageController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to right, #000428, #004e92);">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../asset/blank_user.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lb_nametag" text="Label" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lb_roletag" text="Label" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="300.0" prefWidth="300.0">
+               <children>
+                  <Button fx:id="btn_editmanager" mnemonicParsing="false" onMouseClicked="#evnt_editmanager" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #004e92;" text="Người quản lý" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btn_editpl" mnemonicParsing="false" onMouseClicked="#evnt_editpl" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: #004e92;" text="Bãi đỗ xe" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <StackPane fx:id="stk_menupane" prefHeight="500.0" prefWidth="500.0">
+         <children>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="500.0" prefWidth="500.0" spacing="20.0">
+                     <children>
+                        <Label text="Thông tin bãi đỗ xe" textFill="#004e92">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox spacing="50.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label prefWidth="100.0" text="Tên bãi đỗ" textFill="#004e92">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="fld_name2">
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor></TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label prefWidth="100.0" text="Địa chỉ" textFill="#004e92">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="fld_add2">
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor></TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox />
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label prefWidth="100.0" text="Quận/huyện" textFill="#004e92">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="cb_district2" prefWidth="150.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></ComboBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label prefWidth="100.0" text="Số chỗ" textFill="#004e92">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="fld_amount2">
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor></TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="btn_add2" mnemonicParsing="false" onMouseClicked="#evnt_add2" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to right, #000428, #004e92); -fx-background-insets: 0;" text="Thêm" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btn_edit2" mnemonicParsing="false" onMouseClicked="#evnt_edit2" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to right, #000428, #004e92); -fx-background-insets: 0;" text="Sửa" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btn_del2" mnemonicParsing="false" onMouseClicked="#evnt_del2" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to right, #000428, #004e92); -fx-background-insets: 0;" text="Xóa" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btn_reset2" mnemonicParsing="false" onMouseClicked="#evnt_reset2" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to right, #000428, #004e92); -fx-background-insets: 0;" text="Reset" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label text="Bãi đỗ xe" textFill="#004e92">
+                                       <font>
+                                          <Font name="Arial Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="tv_pl2" onMouseClicked="#evnt_getpl2" prefHeight="200.0" prefWidth="250.0" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER">
+                                 <children>
+                                    <Label text="Người quản lý" textFill="#004e92">
+                                       <font>
+                                          <Font name="Arial Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="tv_manager2" prefHeight="200.0" prefWidth="250.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" />
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="500.0" prefWidth="500.0" spacing="20.0">
+                     <children>
+                        <Label text="Thông tin người quản lý" textFill="#004e92">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox spacing="50.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label fx:id="lb_username1" prefWidth="100.0" text="Tên đăng nhập" textFill="#004e92">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="fld_user1">
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor></TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label fx:id="lb_password1" prefWidth="100.0" text="Mật khẩu" textFill="#004e92">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <PasswordField fx:id="fld_psswd1">
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor></PasswordField>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label prefWidth="100.0" text="Tên" textFill="#004e92">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="fld_name1">
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor></TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label prefWidth="100.0" text="Ngày sinh" textFill="#004e92" />
+                                          <DatePicker fx:id="dp_birth1" prefHeight="25.0" prefWidth="150.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></DatePicker>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label prefWidth="100.0" text="Giới tính" textFill="#004e92">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="cb_gender1" prefWidth="150.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></ComboBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label prefWidth="100.0" text="Địa chỉ email" textFill="#004e92">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="fld_mail1">
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor></TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label prefWidth="100.0" text="SĐT" textFill="#004e92">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="fld_phone1">
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor></TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label prefWidth="100.0" text="Địa chỉ" textFill="#004e92">
+                                             <font>
+                                                <Font name="Arial" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="fld_add1">
+                                             <cursor>
+                                                <Cursor fx:constant="TEXT" />
+                                             </cursor></TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="btn_add1" mnemonicParsing="false" onMouseClicked="#evnt_add1" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to right, #000428, #004e92); -fx-background-insets: 0;" text="Thêm" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btn_edit1" mnemonicParsing="false" onMouseClicked="#evnt_edit1" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to right, #000428, #004e92); -fx-background-insets: 0;" text="Sửa" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btn_del1" mnemonicParsing="false" onMouseClicked="#evnt_del1" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to right, #000428, #004e92); -fx-background-insets: 0;" text="Xóa" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="btn_reset1" mnemonicParsing="false" onMouseClicked="#evnt_reset1" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to right, #000428, #004e92); -fx-background-insets: 0;" text="Reset" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tv_manager1" onMouseClicked="#evnt_getitem1" prefHeight="255.0" prefWidth="420.0" />
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                              <TextField fx:id="fld_search1">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></TextField>
+                              <Button fx:id="btn_search1" mnemonicParsing="false" onMouseClicked="#evnt_search1" prefHeight="50.0" prefWidth="125.0" style="-fx-background-color: linear-gradient(to right, #000428, #004e92); -fx-background-insets: 0;" text="Tìm kiếm" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children></StackPane>
+   </children>
+</HBox>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(to right, #000428, #004e92);">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/car.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <StackPane fx:id="stkpane_login" layoutX="400.0">
+         <children>
+            <Pane prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Button fx:id="btn_exit1" layoutX="354.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#evnt_exit" style="-fx-background-color: linear-gradient(to right, #000428, #004e92);" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asset/icons8_delete_64px_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="50.0" layoutY="50.0" text="Đăng ký">
+                     <font>
+                        <Font name="Ebrima Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="95.0" text="Nhập thông tin để đăng ký">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fld_usrname1" layoutX="75.0" layoutY="160.0" prefHeight="35.0" prefWidth="250.0" promptText="Tên đăng nhập">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <TextField fx:id="fld_email" layoutX="75.0" layoutY="220.0" prefHeight="35.0" prefWidth="250.0" promptText="Địa chỉ email">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <PasswordField fx:id="fld_psswd1" layoutX="75.0" layoutY="280.0" prefHeight="35.0" prefWidth="250.0" promptText="Mật khẩu">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></PasswordField>
+                  <PasswordField fx:id="fld_pwcheck" layoutX="75.0" layoutY="340.0" prefHeight="35.0" prefWidth="250.0" promptText="Nhập lại mật khẩu">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </PasswordField>
+                  <Button fx:id="btn_reg" layoutX="122.0" layoutY="434.0" mnemonicParsing="false" onMouseClicked="#evnt_reg" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(to right, #000428, #004e92); -fx-background-insets: 0;" text="Đăng ký" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btn_back" layoutX="16.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#evnt_back" style="-fx-background-color: linear-gradient(to right, #000428, #004e92);">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asset/icons8_back_64px_2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="lb_status1" alignment="CENTER" layoutY="500.0" prefHeight="30.0" prefWidth="400.0" text="Label" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Pane fx:id="content_area" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Label layoutX="50.0" layoutY="50.0" text="Xin chào,">
+                     <font>
+                        <Font name="Ebrima Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="95.0" text="Đăng nhập để tiếp tục">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="fld_usrname" layoutX="75.0" layoutY="220.0" prefHeight="35.0" prefWidth="250.0" promptText="Tên đăng nhập" style="-fx-background-insets: 0,0 0 1 0; -fx-background-color: -fx-text-box-border, -fx-background; -fx-background-radius: 0;">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <PasswordField fx:id="fld_psswd" layoutX="75.0" layoutY="280.0" prefHeight="35.0" prefWidth="250.0" promptText="Mật khẩu" style="-fx-background-insets: 0, 0 0 1 0; -fx-background-color: -fx-text-box-border, -fx-background; -fx-background-radius: 0;">
+                     <font>
+                        <Font name="Ebrima" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </PasswordField>
+                  <Label fx:id="lb_reg" layoutX="234.0" layoutY="477.0" onMouseClicked="#evnt_switchreg" style="-fx-background-color: #ffffff;" text="Đăng ký" textFill="#004e92">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label layoutX="108.0" layoutY="477.0" style="-fx-background-color: #ffffff;" text="Người dùng mới?">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lb_status" alignment="CENTER" layoutY="515.0" prefHeight="30.0" prefWidth="400.0" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_login" layoutX="122.0" layoutY="382.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-insets: 0; -fx-background-color: linear-gradient(to right, #000428, #004e92);" text="Đăng nhập" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btn_exit" layoutX="354.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#evnt_exit" style="-fx-background-color: linear-gradient(to right, #000428, #004e92);" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asset/icons8_delete_64px_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
